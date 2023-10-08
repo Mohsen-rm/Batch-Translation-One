@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/primaryColor">
+
+    <!-- Add your content inside a CardView with rounded corners -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+    <!-- Add your content inside the CardView here -->
+    <!-- For example, add TextViews, Buttons, or other views -->
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
