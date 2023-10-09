@@ -3,4 +3,6 @@
     <string name="choose_languages">Choose languages</string>
     <string name="share_the_app">Share the app\n</string>
     <string name="download_languages">Download languages</string>
+    <string name="app_evaluation">App evaluation</string>
+    <string name="exit_the_application">Exit the application</string>
 </resources>

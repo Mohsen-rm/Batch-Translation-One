@@ -38,6 +38,7 @@
             app:cardUseCompatPadding="true">
 
             <LinearLayout
+                android:id="@+id/linear_choices_languages"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/primaryColor"
@@ -79,6 +80,7 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/linear_translation_downloads"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:orientation="horizontal"

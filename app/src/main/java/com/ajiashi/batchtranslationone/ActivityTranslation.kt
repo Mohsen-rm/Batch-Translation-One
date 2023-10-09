@@ -45,6 +45,8 @@ class ActivityTranslation : AppCompatActivity() {
                 // ...
             }
 
+        //    var data_langauges = ArrayList<ItemsLanguages>()
+
 //        runOnUiThread{
 //
 //        }

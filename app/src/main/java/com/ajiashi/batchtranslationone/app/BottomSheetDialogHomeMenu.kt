@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.text.ClipboardManager
+import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -20,13 +21,34 @@ class BottomSheetDialogHomeMenu(context: Context) {
         val bottomSheetDialog = BottomSheetDialog(context)
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_dialog_home_menu_layout)
 
+        val btn_downloads = bottomSheetDialog.findViewById<View>(R.id.linear_downloads)
+        val btn_share = bottomSheetDialog.findViewById<View>(R.id.linear_share)
+        val btn_evaluation = bottomSheetDialog.findViewById<View>(R.id.linear_evaluation)
+        val btn_close = bottomSheetDialog.findViewById<View>(R.id.linear_close_app)
+
+        btn_downloads?.setOnClickListener {
+            goActivityDownloads()
+        }
+
+        btn_share?.setOnClickListener {
+            shareApp()
+        }
+
+        btn_evaluation?.setOnClickListener {
+            likeApp()
+        }
+
+        btn_close?.setOnClickListener {
+            closeApp()
+        }
+
         bottomSheetDialog.show()
     }
 
 
 
     private fun shareApp() {
-        val appPackageName = "packageName"
+        val appPackageName = "com.ajiashi.batchtranslationone"
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.type = "text/plain"
         val shareMessage = "Check out this awesome app: https://play.google.com/store/apps/details?id=$appPackageName"
@@ -36,13 +58,12 @@ class BottomSheetDialogHomeMenu(context: Context) {
     
     private fun goActivityDownloads() {
         val intent = Intent(context,ActivityTranslationDownloads::class.java)
-        intent.putExtra("key", "value")
         context.startActivity(intent)
     }
     
     private fun likeApp(){
         // في داخل نشاط أو فرع الكود الخاص بك
-        val appPackageName = "packageName" // احصل على اسم حزمة التطبيق الخاصة بك
+        val appPackageName = "com.ajiashi.batchtranslationone" // احصل على اسم حزمة التطبيق الخاصة بك
 
         try {
             // قم بفتح تقييم التطبيق على Google Play
@@ -56,6 +77,5 @@ class BottomSheetDialogHomeMenu(context: Context) {
     private fun closeApp(){
         System.exit(0)
     }
-
 
 }
